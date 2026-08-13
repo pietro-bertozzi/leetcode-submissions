@@ -1,7 +1,8 @@
 class Solution {
 public:
     int minDistance(string word1, string word2) {
-        int n = word1.length(), m = word2.length();
+        if (word1.size() < word2.size()) swap(word1, word2);
+        int n = word1.size(), m = word2.size();
         vector<int> dp(m + 1, 0);
         for (int j = 0; j <= m; ++j) dp[j] = j;
         for (int i = 1; i <= n; ++i) {
