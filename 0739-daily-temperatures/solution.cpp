@@ -6,7 +6,7 @@ public:
         vector<int> mono;
         mono.reserve(n);
         for (int i = 0; i < n; ++i) {
-            while (!mono.empty() && temperatures[i] > temperatures[mono.back()]) {
+            while (!mono.empty() && temperatures[mono.back()] < temperatures[i]) {
                 int p = mono.back();
                 mono.pop_back();
                 result[p] = i - p;
