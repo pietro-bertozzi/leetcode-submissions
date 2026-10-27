@@ -12,8 +12,8 @@ private:
         int root_i = find(i);
         int root_j = find(j);
         if (root_i != root_j) {
-            parent[root_i] = root_j;
             groups--;
+            parent[root_i] = root_j;
         }
     }
 
