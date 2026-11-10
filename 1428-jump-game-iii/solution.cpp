@@ -5,7 +5,7 @@ public:
         if (arr[start] < 0) return false;
         if (arr[start] == 0) return true;
         int step = arr[start];
-        arr[start] = -arr[start];
+        arr[start] *= -1;
         return canReach(arr, start + step) || canReach(arr, start - step);
     }
 };
