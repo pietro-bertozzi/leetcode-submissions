@@ -4,8 +4,7 @@ public:
         int n = t.size(), p = 0;
         for (int si : s) {
             while (p < n && si != t[p]) p++;
-            if (p == n) return false;
-            p++;
+            if (p++ == n) return false;
         }
         return true;
     }
